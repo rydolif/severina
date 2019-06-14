@@ -4,12 +4,12 @@
 
 	if ( isset($_POST) ) {
 		$name = htmlspecialchars(trim($_POST['name']));
-		$email = htmlspecialchars(trim($_POST['email']));
+		$mail = htmlspecialchars(trim($_POST['mail']));
 		$phone = htmlspecialchars(trim($_POST['phone']));
 		$subject = $_POST['subject'] ? htmlspecialchars(trim($_POST['subject'])):'';
 		$comment = isset($_POST['comment']) ? htmlspecialchars(trim($_POST['comment'])):'';
 		$question = isset($_POST['question']) ? htmlspecialchars(trim($_POST['question'])):'';
-		$to = 'vlad.spelui@gmail.com';
+		$to = 'info@kosmeticpro.ru';
 
 		$headers = "From: $SITE_TITLE \r\n";
 		$headers .= "Reply-To: ". $email . "\r\n";
@@ -18,7 +18,7 @@
 
 		$data = '<h1>'.$subject."</h1>";
 		$data .= 'Имя: '.$name."<br>";
-		$data .= 'Почта: '.$email."<br>";
+		$data .= 'Почта: '.$mail."<br>";
 		$data .= 'Телефон: '.$phone."<br>";
 
 

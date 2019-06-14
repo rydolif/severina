@@ -161,7 +161,7 @@
 						</div>
 						<div class="callback__input">
 							<p>Email</p>
-							<input type="email" name="email" required>
+							<input type="email" name="mail" required>
 						</div>
 						<div class="callback__input">
 							<p>Телефон</p>
@@ -370,14 +370,43 @@
 			</div>
 		</div>
 	</footer>
-<!--modal --> 
-	<div class="modal" id="order">
-		<div class="wrapper">
-			<form action="sendmail.php" class="form" method="post">
 
-				<button class="close order_close" type="button"></button>
+	
+	<!--modal --> 
+		<div class="modal" id="order">
+			<div class="wrapper">
+				<form action="sendmail.php" class="form" method="post">
 
-				<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
+					<button class="close order_close" type="button"></button>
+
+					<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
+					<input type="hidden" name="subject" value="Узнать подробнее!">
+					<div class="">
+						<p>Имя</p>
+						<input type="text" name="name" required>
+					</div>
+					<div class="">
+						<p>Email</p>
+						<input type="email" name="mail" required>
+					</div>
+					<div class="">
+						<p>Телефон</p>
+						<input type="tel" name="phone" required>
+					</div>
+					<div><button type="submit" class="btn modal__btn" name="submit">Оставить заявку</button></div>
+				</form>
+			</div>
+		</div>
+			<!--madal end -->
+
+			<!--modal --> 
+		<div class="modal" id="price">
+			<div class="wrapper">
+				<form action="sendmail.php" class="form" method="post">
+
+				<button class="close price_close" type="button"></button>
+
+				<h3>Чтобы узнать цену <span><br>Заполните форму и мы обязательно с Вами свяжемся</span></h3>
 				<input type="hidden" name="subject" value="Узнать подробнее!">
 				<div class="">
 					<p>Имя</p>
@@ -385,50 +414,23 @@
 				</div>
 				<div class="">
 					<p>Email</p>
-					<input type="email" name="email" required>
+					<input type="email" name="mail" required>
 				</div>
 				<div class="">
 					<p>Телефон</p>
 					<input type="tel" name="phone" required>
 				</div>
-				<div><button type="submit" class="btn modal__btn" name="submit">Оставить заявку</button></div>
+				<div><button type="submit" class="btn modal__btn" name="submit">УЗНАТЬ ЦЕНУ</button></div>
 			</form>
+			
 		</div>
-	</div>
-		<!--madal end -->
-
-		<!--modal --> 
-	<div class="modal" id="price">
-		<div class="wrapper">
-			<form action="sendmail.php" class="form" method="post">
-
-			<button class="close price_close" type="button"></button>
-
-			<h3>Чтобы узнать цену <span><br>Заполните форму и мы обязательно с Вами свяжемся</span></h3>
-			<input type="hidden" name="subject" value="Узнать подробнее!">
-			<div class="">
-				<p>Имя</p>
-				<input type="text" name="name" required>
+			<div class="modal" id="thanks">
+				<button class="close thanks_close" type="button"></button>
+				<h3>Спасибо <br>за доверие!</h3>
+				<p>Мы обязательно с вами свяжемся!</p>
 			</div>
-			<div class="">
-				<p>Email</p>
-				<input type="email" name="email" required>
-			</div>
-			<div class="">
-				<p>Телефон</p>
-				<input type="tel" name="phone" required>
-			</div>
-			<div><button type="submit" class="btn modal__btn" name="submit">УЗНАТЬ ЦЕНУ</button></div>
-		</form>
-		
-	</div>
-		<div class="modal" id="thanks">
-			<button class="close thanks_close" type="button"></button>
-			<h3>Спасибо <br>за доверие!</h3>
-			<p>Мы обязательно с вами свяжемся!</p>
 		</div>
-	</div>
-		<!--madal end -->
+	<!--madal end -->
 
 	<script src="js/scripts.min.js"></script>
 </body>
