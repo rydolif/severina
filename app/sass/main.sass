@@ -1,0 +1,481 @@
+@import "libs"
+@import "base"
+
+
+.header
+	position: fixed
+	right: 0
+	left: 0
+	background-color: #fff
+	padding: 15px 0
+	transition: all .3s
+	width: 100%
+	z-index: 1001
+	border-bottom: 10px solid #fa334f
+
+	&:active, &::menu
+		background-color: rgba(0, 0, 0, .8)
+		padding: 5px 0
+
+	&--active
+		position: fixed
+		background-color: rgba(#fff, .8)
+		padding: 5px 0
+		border-bottom: 3px solid #fa334f
+
+
+	&__container
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		.logo,
+		.tel,
+		.mail
+			display: none
+	
+	&__nav
+		display: flex
+		justify-content: space-around
+		align-items: center
+		width: 100%
+
+		a
+			position: relative
+			z-index: 1
+			text-transform: uppercase
+			font-size: 18px
+			color: $text
+			letter-spacing: 1.8px
+
+			&::before
+				content: ''
+				width: 0
+				transform: scale(0)
+				transition: all .3s
+				position: absolute
+				bottom: 0
+				width: 100%
+				height: 1px
+				background-color: $text
+				z-index: -1
+
+			&:hover,
+			&:focus
+				color: $text
+				text-decoration: none
+				&::before
+					transform: scale(1)
+
+	&__tel
+		display: flex
+		align-items: center
+		img
+			margin-right: 20px
+
+	&__mail
+		display: flex
+		align-items: center
+		img
+			margin-right: 20px
+	
+	&__btn
+		background-color: $title
+		font-size: 15px
+		border-radius: 20px
+
+		&:focus,
+		&:hover
+			background-color: $accent
+.hero
+	position: relative
+	padding-top: 150px
+	padding-bottom: 200px
+	z-index: 1
+
+	&__img
+		position: absolute
+		top: 13%
+		right: 0
+		width: 800px
+		z-index: -5
+
+	&::before
+		content: ''
+		position: absolute
+		left: -8%
+		bottom: 87px
+		transform: rotate(5deg)
+		width: 60.5%
+		height: 47%
+		background-color: #49c0dc
+		z-index: -1
+
+	&::after
+		content: ''
+		position: absolute
+		right: -5%
+		bottom: 85px
+		transform: rotate(-5deg)
+		width: 57.5%
+		height: 47%
+		background-color: #49c0dc
+		z-index: -1
+
+	&__title
+		position: relative
+		padding-left: 10px
+		&::before
+			content: ''
+			position: absolute
+			left: -10px
+			top: 50%
+			transform: translate(0,-50%)
+			width: 3px
+			height: 130px
+			background: $title
+		h1
+			font-size: 36px
+			letter-spacing: 3.6px
+			line-height: 1.4
+			color: $title
+			margin-bottom: 20px
+		h2
+			font-size: 24px
+			letter-spacing: 2.4px
+			color: $accent
+			line-height: 24px
+			margin-bottom: 45px
+
+	&__list
+		display: flex
+		margin-bottom: 35px
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-right: 60px
+		text-align: center
+
+		&:last-child
+			margin-right: 0
+		img
+			margin-bottom: 20px
+
+	&__btn
+		margin-bottom: 200px
+		font-size: 18px
+
+	&__about
+		text-align: center
+		h2
+			font-size: 36px
+			letter-spacing: 3.6px
+			color: #ffffff
+			padding-bottom: 55px
+
+		&_list
+			display: flex
+			justify-content: space-between
+
+		&_item
+			position: relative
+			text-align: left
+			width: 24%
+			padding: 85px 20px 85px 25px
+			background-color: #ffffff
+			font-size: 17px
+			letter-spacing: 1.6px
+			color: #2b271e
+			box-shadow: 3px 5px 12px rgba(43, 46, 74, 0.25)
+
+			&:hover,
+			&:focus
+				box-shadow: 5px 7px 15px rgba(43, 46, 74, 0.75)
+				transition: all .6s
+
+			span
+				position: absolute
+				top: -25px
+				left: 105px
+				width: 68px
+				height: 65px
+				border: 3px solid #00458f
+				border-radius: 50%
+				background-color: #ffffff
+				z-index: 1
+				img
+					position: absolute
+					top: 12px
+					right: 12px
+			&:nth-child(3)
+				img
+					top: 13px
+					right: 13px
+			&:nth-child(4)
+				img
+					top: 14px
+					right: 13px
+
+.products
+	position: relative
+	padding-bottom: 100px
+
+	&::before 
+		content: ''
+		position: absolute
+		left: -1%
+		bottom: 100px
+		transform: rotate(5deg)
+		width: 51%
+		height: 20px
+		background-color: #49c0dc
+
+	&::after 
+		content: ''
+		position: absolute
+		right: -1%
+		bottom: 100px
+		transform: rotate(-5deg)
+		width: 51.5%
+		height: 20px
+		background-color: #49c0dc
+
+	&__list
+		display: flex
+		flex-direction: column
+
+	&__item
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+		width: 100%
+		padding-bottom: 60px
+		&:first-child
+			padding-top: 50px
+
+		&:nth-child(1)
+			img
+				top: -10%
+		&:nth-child(2)
+			img
+				top: -10%
+		&:nth-child(3)
+			img
+				top: -10%
+		h2
+			font-size: 36px
+			letter-spacing: 3.6px
+			color: #023c7b
+			line-height: 43px
+			padding-bottom: 35px
+
+		h3
+			position: relative
+			font-size: 30px
+			letter-spacing: 3px
+			color: #292929
+			padding-bottom: 70px
+
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				bottom: 55px
+				transform: translate(0,-50%)
+				width: 80%
+				height: 4px
+				background-color: #00458f
+
+		p
+			font-size: 18px
+			letter-spacing: 1.3px
+			color: #292929
+			padding-bottom: 30px
+			line-height: 20px
+
+			span
+				color: #f27013
+
+		img
+			position: absolute
+			top: 0
+			right: 0
+			z-index: -1
+
+
+	&__about
+		position: relative
+		width: 50%
+		div
+			text-align: center
+			button
+				font-size: 18px
+				padding: 0 42px
+	
+.callback
+	position: relative
+	padding-bottom: 50px
+
+	&::before
+		content: ''
+		position: absolute
+		left: -3%
+		bottom: -135px
+		-webkit-transform: rotate(7deg)
+		-ms-transform: rotate(7deg)
+		transform: rotate(7deg)
+		width: 55%
+		height: 50%
+		background-color: #00458f
+		z-index: -1
+
+	&::after
+		content: ''
+		position: absolute
+		right: -6%
+		bottom: -135px
+		transform: rotate(-7deg)
+		width: 60%
+		height: 50%
+		background-color: #00458f
+		z-index: -1
+
+
+	&__container
+		display: flex
+		flex-direction: column
+		
+
+	&__img
+		position: absolute
+		top: 50px
+		left: 100px
+		width: 850px
+		z-index: -5
+	
+	&__right
+		display: flex
+		justify-content: flex-end
+		flex-direction: column
+		align-items: flex-end
+
+	&__form
+		padding-right: 50px
+		
+	
+	&__text
+		position: relative
+
+		&::before
+				content: ''
+				position: absolute
+				left: -20px
+				top: 65px
+				transform: translate(0,-50%)
+				width: 2px
+				height: 78px
+				background-color: #00458f
+
+		h3
+			color: #023c7b
+			font-size: 36px
+			letter-spacing: 3.6px
+
+		p
+			font-size: 20px
+			letter-spacing: 1px
+			color: #292929
+
+	&__input
+		padding-left: 50px
+
+		p
+			font-size: 18px
+			padding-left: 20px
+			letter-spacing: 1px
+	
+	&__btn
+		text-align: center
+		padding-top: 55px
+	
+	&__footer
+		padding-top: 140px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+		h3
+			color: #ffffff
+			font-size: 30px
+			letter-spacing: 3px
+			padding-bottom: 20px
+		
+		span
+			padding: 13px 40px
+			background-color: #49c0dc
+			border-radius: 10px
+
+		
+.footer
+	background-color: #00458f
+	color: #ffffff
+
+	h3
+		font-size: 30px
+		letter-spacing: 3px
+		text-align: center
+		padding-bottom: 60px
+
+	img
+		padding-right: 10px
+
+	a
+		color: #fff
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+
+	&__item
+		width: 24%
+		display: flex
+		flex-direction: column
+		padding-bottom: 45px
+
+		p
+			font-size: 20px
+			letter-spacing: 2px
+
+		a
+			position: relative
+			font-size: 16px
+			z-index: 1
+
+			&::before
+				content: ''
+				width: 0
+				transform: scale(0)
+				transition: all .3s
+				position: absolute
+				bottom: 0
+				width: 100%
+				height: 1px
+				background-color: #fff
+				z-index: -1
+
+			&:hover,
+			&:focus
+				color: #fff
+				text-decoration: none
+				&::before
+					transform: scale(1)
+
+
+@import "page"
+@import "media" // Always at the end
